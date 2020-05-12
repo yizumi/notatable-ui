@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Bravura';
+    src: url('https://yizumi.github.io/redist/woff/Bravura.woff') format("woff"),
+         url('https://yizumi.github.io/redist/woff/Bravura.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?19305510#fontello') format('svg');
+  }
+}
+*/
+
+.score {
+    font-family: "Bravura";
+    color: Black;
+
+    i {
+        font-size: 48pt;
+        font-weight: normal;
+        font-style: normal;
+        float: left;
+        &:before {
+            float: left;
+        }
+        &:after {
+            float: left;
+        }
+    }
+    .staff {
+        height: 75px;
+        background-color: #fff;
+        background-image: linear-gradient(90deg, transparent 52px, transparent 81px), linear-gradient(#040404 .05em, transparent .05em);
+        background-size: 100% 1em;
+        clear: both;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .g-clef { &:before { content: '\E050'; } margin-top: 42px; }
+    .f-clef { &:before { content: '\E062'; } margin-top: 5px; }
+
+    .quarter {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .c-2 { &:before { content: '\E1D5'; margin-top: 96px; } &:after { content: '\E011'; margin-top: 120px; margin-left: -27px; } }
+    .c-sharp-2 { &:before { content: '\266F \E1D5'; margin-top: 96px; } &:after { content: '\E011'; margin-top: 120px; margin-left: -27px; } }
+    .d-2 { &:before { content: '\E1D5'; margin-top: 88px; } &:after { content: '\E010'; margin-top: 112px; margin-left: -27px; } }
+    .d-sharp-2 { &:before { content: '\266F \E1D5'; margin-top: 88px; } &:after { content: '\E010'; margin-top: 112px; margin-left: -27px; } }
+    .e-flat-2 { &:before { content: '\266D \E1D5'; margin-top: 80px; } &:after { content: '\E010'; margin-top: 112px; margin-left: -27px; } }
+    .e-2 { &:before { content: '\E1D5'; margin-top: 80px; } &:after { content: '\E010'; margin-top: 112px; margin-left: -27px; } }
+    .f-2 { &:before { content: '\E1D5'; margin-top: 69px; } }
+    .f-sharp-2 { &:before { content: '\266F \E1D5'; margin-top: 69px; } }
+    .g-2 { &:before { content: '\E1D5'; margin-top: 60px; } }
+    .g-sharp-2 { &:before { content: '\266F \E1D5'; margin-top: 60px; } }
+    .a-2 { &:before { content: '\E1D5'; margin-top: 51px; } }
+    .a-sharp-2 { &:before { content: '\266F \E1D5'; margin-top: 51px; } }
+    .b-flat-2 { &:before { content: '\266D \E1D5'; margin-top: 42px; } }
+    .b-2 { &:before { content: '\E1D5'; margin-top: 42px; } }
+
+    .c-3 { &:before { content: '\E1D5'; margin-top: 33px; } }
+    .c-sharp-3 { &:before { content: '\266F \E1D5'; margin-top: 33px; } }
+    .d-3 { &:before { content: '\E1D6'; margin-top: 24px; } }
+    .d-sharp-3 { &:before { content: '\266F \E1D6'; margin-top: 24px; } }
+    .e-flat-3 { &:before { content: '\266D \E1D6'; margin-top: 15px; } }
+    .e-3 { &:before { content: '\E1D6'; margin-top: 15px; } }
+    .f-3 { &:before { content: '\E1D6'; margin-top: 6px; } }
+    .f-sharp-3 { &:before { content: '\266F \E1D6'; margin-top: 6px; } }
+    .g-3 { &:before { content: '\E1D6'; margin-top: -3px; } }
+    .g-sharp-3 { &:before { content: '\266F \E1D6'; margin-top: -3px; } }
+    .a-3 { &:before { content: '\E1D6'; margin-top: -12px; } }
+    .a-sharp-3 { &:before { content: '\266F \E1D6'; margin-top: -12px; } }
+    .b-flat-3 { &:before { content: '\266D \E1D6'; margin-top: -21px; } }
+    .b-3 { &:before { content: '\E1D6'; margin-top: -21px; } }
+
+    .c-4 { &:before { content: '\E1D6'; margin-top: -30px; } &:after { content: '\E010'; margin-top: 2px; margin-left: -6px; } margin-right: -28px; }
+    .c-sharp-4 { &:before { content: '\266F \E1D6'; margin-top: -30px; } &:after { content: '\E010'; margin-top: 2px; margin-left: 15px; } margin-right: -36px; }
+    .d-4 { &:before { content: '\E1D6'; margin-top: -39px; } &:after { content: '\E010'; margin-top: 2px; margin-left: -6px; } margin-right: -28px; }
+    .d-sharp-4 { &:before { content: '\266F \E1D6'; margin-top: -39px; } &:after { content: '\E010'; margin-top: 2px; margin-left: 15px; } margin-right: -42px; }
+    .e-flat-4 { &:before { content: '\266D \E1D6'; margin-top: -48px; } &:after { content: '\E011'; margin-top: -6px; margin-left: 14px; } margin-right: -42px; }
+    .e-4 { &:before { content: '\E1D6'; margin-top: -48px; } &:after { content: '\E011'; margin-top: -6px; margin-left: -7px; } margin-right: -19px; }
+    .f-4 { &:before { content: '\E1D6'; margin-top: -56px; } &:after { content: '\E011'; margin-top: -6px; margin-left: -7px; } margin-right: -28px; }
+    .f-sharp-4 { &:before { content: '\266F \E1D6'; margin-top: -56px; } &:after { content: '\E011'; margin-top: -6px; margin-left: 14px; } margin-right: -28px; }
+    .g-4 { &:before { content: '\E1D6'; margin-top: -62px; } &:after { content: '\E012'; margin-top: -14px; margin-left: -7px; } margin-right: -28px; }
+    .g-sharp-4 { &:before { content: '\266F \E1D6'; margin-top: -62px; } &:after { content: '\E012'; margin-top: -14px; margin-left: 15px; } margin-right: -28px; }
+    .a-4 { &:before { content: '\E1D6'; margin-top: -72px; } &:after { content: '\E012'; margin-top: -14px; margin-left: -7px; } margin-right: -28px; }
+}
